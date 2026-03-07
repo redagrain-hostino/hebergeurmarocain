@@ -1,0 +1,43 @@
+---
+interface Props {
+    title?: string;
+    description?: string;
+}
+
+const {
+    title = "Hébergeur Marocain - Meilleur hébergement web au Maroc",
+    description = "Comparatif des meilleurs hébergeurs web au Maroc. Trouvez l'hébergement web idéal pour votre site.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content={description} />
+        <title>{title}</title>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <!-- Elementor / theme CSS served as static assets, no JS import -->
+        <link
+            rel="stylesheet"
+            href="/styles/autoptimize_single_fb5cef3f2cd1c25e810db533fc2161ec.css"
+        />
+        <link rel="stylesheet" href="/styles/frontend.min.css" />
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Serif+4:wght@700&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Font Awesome for icons -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
+    </head>
+    <body>
+        <slot />
+    </body>
+</html>
