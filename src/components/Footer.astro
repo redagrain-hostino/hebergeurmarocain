@@ -1,0 +1,199 @@
+<footer class="site-footer">
+    <!-- Top divider line -->
+    <div class="footer-divider" aria-hidden="true"></div>
+
+    <!-- Main footer row: logo + nav -->
+    <div class="footer-main">
+        <div class="footer-container">
+            <!-- Logo column -->
+            <div class="footer-col footer-col-logo">
+                <a href="/" class="footer-logo-link">
+                    <img
+                        src="/images/logo-white-300x76.png"
+                        alt="Hébergeur Marocain"
+                        width="195"
+                        height="49"
+                        loading="lazy"
+                    />
+                </a>
+            </div>
+
+            <!-- Navigation column -->
+            <div class="footer-col footer-col-nav">
+                <ul class="footer-nav">
+                    <li><a href="/">Accueil</a></li>
+                    <li><a href="/avis/">Comparatif Hébergeurs</a></li>
+                    <li><a href="/a-propos">À propos</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Empty third column (matches original layout) -->
+            <div class="footer-col footer-col-empty"></div>
+        </div>
+    </div>
+
+    <!-- Bottom bar: disclaimer + badge + copyright -->
+    <div class="footer-bottom">
+        <div class="footer-container">
+            <p class="footer-disclaimer">
+                Conçu pour permettre aux utilisateurs une prise de décision en
+                ligne facile et sécurisée, ce site web offre un nombre important
+                d'informations sur les hébergeurs web au Maroc en plus des
+                différents produits et services. Certains prix et offres
+                spéciales ont la particularité d'être dynamiques et modifiables
+                à tout moment et sans préavis et sont directement fournis par
+                nos partenaires.
+            </p>
+            <div class="footer-bottom-bar">
+                <a href="/" class="footer-badge-link">
+                    <img
+                        src="/images/heb.png"
+                        alt="Hébergeur Marocain"
+                        width="60"
+                        height="60"
+                        loading="lazy"
+                        class="footer-badge"
+                    />
+                </a>
+                <p class="footer-copyright">
+                    Copyright 2025 hebergeurmarocain.com.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+    /* ─── FOOTER ─────────────────────────────────────────────── */
+    .site-footer {
+        background-color: #0a1a3b;
+        color: #ffffff;
+        font-family: "Montserrat", sans-serif;
+        padding-top: 30px;
+    }
+
+    /* Divider line at top */
+    .footer-divider {
+        height: 1px;
+        margin: 0;
+    }
+
+    /* Shared container */
+    .footer-container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .footer-main {
+        padding: 40px 0 30px;
+    }
+
+    .footer-main .footer-container {
+        display: flex;
+        align-items: flex-start;
+        gap: 40px;
+        flex-wrap: wrap;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 70px;
+    }
+
+    .footer-col {
+        flex: 1;
+        min-width: 160px;
+    }
+
+    .footer-col-empty {
+        flex: 1;
+    }
+
+    .footer-logo-link {
+        display: inline-block;
+    }
+
+    .footer-logo-link img {
+        display: block;
+        height: auto;
+    }
+
+    .footer-nav {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .footer-nav li {
+        margin-bottom: 10px;
+    }
+
+    .footer-nav a {
+        color: #ffffff;
+        font-family: "Karla", sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .footer-nav a:hover {
+        color: #c51e3a;
+    }
+
+    /* ─── BOTTOM BAR ─────────────────────────────────────────── */
+    .footer-bottom {
+        padding: 25px 0;
+    }
+
+    .footer-disclaimer {
+        color: rgb(255, 255, 255);
+        font-family: "Karla", sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 1.6;
+        margin: 0 0 20px;
+    }
+
+    .footer-bottom-bar {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .footer-badge-link {
+        display: inline-block;
+        flex-shrink: 0;
+    }
+
+    .footer-badge {
+        display: block;
+        width: 30px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .footer-copyright {
+        color: rgba(255, 255, 255, 0.6);
+        font-family: "Karla", sans-serif;
+        font-size: 13px;
+        margin: 0;
+    }
+
+    /* ─── RESPONSIVE ─────────────────────────────────────────── */
+    @media (max-width: 767px) {
+        .footer-main .footer-container {
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .footer-col-empty {
+            display: none;
+        }
+
+        .footer-bottom-bar {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+</style>

@@ -1,0 +1,204 @@
+<header class="site-header">
+    <div class="header-container">
+        <!-- Logo Section -->
+        <div class="header-logo">
+            <a href="https://hebergeurmarocain.com" class="logo-link">
+                <img
+                    class="logo-img"
+                    src="https://hebergeurmarocain.com/wp-content/uploads/2022/02/hebergeurmarocain-logo.png"
+                    width="200"
+                    height="200"
+                    alt="Hébergeur Marocain"
+                />
+            </a>
+        </div>
+
+        <!-- Navigation Section -->
+        <nav class="header-nav">
+            <!-- Mobile Toggle button (hidden on desktop) -->
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                <i class="fa-solid fas fa-bars" aria-hidden="true"></i>
+            </button>
+
+            <!-- Menu list -->
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a
+                        href="https://hebergeurmarocain.com/"
+                        class="nav-link active">ACCUEIL</a
+                    >
+                </li>
+                <li class="nav-item">
+                    <a
+                        href="https://hebergeurmarocain.com/avis"
+                        class="nav-link">COMPARATIF HÉBERGEURS</a
+                    >
+                </li>
+                <li class="nav-item">
+                    <a
+                        href="https://hebergeurmarocain.com/a-propos"
+                        class="nav-link">À PROPOS</a
+                    >
+                </li>
+                <li class="nav-item">
+                    <a
+                        href="https://hebergeurmarocain.com/contact"
+                        class="nav-link">CONTACT</a
+                    >
+                </li>
+            </ul>
+        </nav> 
+    </div>
+</header>
+
+<style>
+    /*
+     * Header styles — values sourced from:
+     *   styles/style2.css  (header bg, logo height, nav link colors & typography, mobile overrides)
+     *   styles/autoptimize_single_*.css  (global color tokens)
+     */
+
+    /* ── CSS custom properties (from autoptimize_single_*.css + style2.css brand colours) ── */
+    :root {
+        --color-primary: #7d00ff; /* brand primary */
+        --color-hover: #6e00e0; /* nav link hover (.wdes-menu-navbar .default-drop > li > a:hover) */
+        --color-active: #6e00e0; /* current menu item (.wdes-menu-navbar .default-drop > li.current-menu-item > a) */
+        --color-nav-text: #242424; /* default nav link colour (.wdes-menu-navbar ul.default-drop > li > a) */
+        --font-nav: "Montserrat", sans-serif; /* nav font-family */
+    }
+
+    /* ── Site header wrapper (header { … } from style2.css) ── */
+    .site-header {
+        background: linear-gradient(-90deg, #fff 0, #fff 100%);
+        border-bottom: 1px solid #fff;
+        width: 100%;
+        position: relative;
+        z-index: 100;
+    }
+
+     .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1140px;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 30px 20px;
+    }
+
+     .header-logo {
+        flex: 0 0 33.333%;
+    }
+
+    .logo-img {
+        height: 50px; 
+        width: auto;
+        display: block;
+    }
+
+     .header-nav {
+        flex: 0 0 66.666%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    /* ── Nav list ── */
+    .nav-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 30px;
+    }
+
+    .nav-item {
+        display: flex;
+        align-items: center;
+    }
+
+     .nav-link {
+        text-decoration: none;
+        color: var(--color-nav-text); /* #242424 */
+        font-family: var(--font-nav); /* "Montserrat" */
+         text-transform: uppercase;
+        transition: color 0.3s ease;
+    }
+
+     .nav-link:hover {
+        color: var(--color-hover); 
+    }
+
+     .nav-link.active {
+        color: var(--color-active); 
+    }
+
+    .mobile-nav-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 24px;
+         color: #fff;
+        cursor: pointer;
+        padding: 0;
+    }
+
+      @media (max-width: 1024px) {
+        .header-container {
+            max-width: 1024px;
+        }
+    }
+
+     @media only screen and (max-width: 960px) and (min-width: 160px) {
+        .header-container {
+            flex-wrap: wrap;
+            padding: 12px 15px;
+        }
+
+        .header-logo {
+            flex: 1 1 auto;
+        }
+
+        /* Show hamburger button */
+        .mobile-nav-toggle {
+            display: block;
+        }
+
+        /* Nav becomes full-width below logo */
+        .header-nav {
+            flex: 1 1 100%;
+            order: 3;
+        }
+
+         .nav-list {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            gap: 0;
+            background-color: #191919;
+        }
+
+        .nav-list.open {
+            display: flex;
+        }
+
+         .nav-link {
+            color: #fff !important;
+            font-size: 14px;
+            padding: 12px 15px;
+            display: block;
+            border-bottom: 1px solid #232323; /* style2.css: border-bottom:1px solid #232323 */
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--color-primary) !important; /* #7d00ff */
+        }
+    }
+
+     @media (max-width: 767px) {
+        .header-container {
+            max-width: 100%;
+        }
+    }
+</style>
