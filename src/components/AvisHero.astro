@@ -1,0 +1,226 @@
+---
+---
+
+    <section class="avis-hero-section">
+        <div class="avis-hero-bg-overlay" aria-hidden="true"></div>
+
+        <div class="avis-hero-container">
+            <!-- Left Column -->
+            <div class="avis-hero-content">
+                <h1 class="avis-hero-title-small">
+                    Classement Hébergement web Maroc
+                </h1>
+                <h2 class="avis-hero-title-main">
+                    Meilleur hébergement web marocain : quel hébergeur choisir?
+                </h2>
+            </div>
+
+            <!-- Right Column -->
+            <div class="avis-hero-image-col">
+                <img
+                    fetchpriority="high"
+                    decoding="async"
+                    src="https://hebergeurmarocain.com/wp-content/uploads/2022/12/meilleur-hebergeur.png"
+                    alt="Meilleur hébergeur web Maroc"
+                    width="718"
+                    height="795"
+                    class="avis-hero-img"
+                />
+            </div>
+        </div>
+
+        <!-- Bottom shape divider -->
+        <div class="avis-shape-bottom" aria-hidden="true">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1000 100"
+                preserveAspectRatio="none"
+            >
+                <path class="avis-shape-fill" d="M0,6V0h1000v100L0,6z"></path>
+            </svg>
+        </div>
+    </section>
+<style>
+    .avis-hero-section {
+        position: relative;
+        background-color: #2f5ab9;
+        overflow: hidden;
+        transition:
+            background 0.3s,
+            border 0.3s,
+            border-radius 0.3s,
+            box-shadow 0.3s;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 50px 0;
+        z-index: 1;
+    }
+
+    .avis-hero-bg-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("https://hebergeurmarocain.com/wp-content/uploads/2022/03/hero-bg.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.14;
+        mix-blend-mode: multiply;
+        transition:
+            background 0.3s,
+            border-radius 0.3s,
+            opacity 0.3s;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    @media (min-width: 1025px) {
+        .avis-hero-bg-overlay {
+            background-attachment: fixed;
+        }
+    }
+
+    .avis-hero-container {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .avis-hero-content {
+        flex: 0 0 45%;
+        max-width: 45%;
+        padding-right: 15px;
+    }
+
+    .avis-hero-title-small {
+        color: #ffffff;
+        font-family: "Poppins", sans-serif;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 1.1em;
+        margin: 0 0 10px;
+    }
+
+    .avis-hero-title-main {
+        color: #ffffff;
+        font-family: "Poppins", sans-serif;
+        font-size: 59px;
+        font-weight: 700;
+        line-height: 1.1em;
+        margin: 0;
+    }
+
+    .avis-hero-image-col {
+        flex: 0 0 55%;
+        max-width: 55%;
+        display: flex;
+        justify-content: flex-end;
+        padding-left: 15px;
+    }
+
+    .avis-hero-img {
+        width: 72%;
+        height: auto;
+        display: block;
+    }
+
+    .avis-shape-bottom {
+        overflow: hidden;
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        line-height: 0;
+        direction: ltr;
+        z-index: 1;
+        transform: rotate(180deg);
+    }
+
+    .avis-shape-bottom svg {
+        display: block;
+        width: calc(100% + 1.3px);
+        position: relative;
+        left: 50%;
+        height: 120px;
+        transform: translateX(-50%) rotateY(180deg);
+    }
+
+    .avis-shape-fill {
+        fill: #ffffff;
+        transform-origin: center;
+        transform: rotateY(0deg);
+    }
+
+    /* Responsive overrides */
+    @media (max-width: 1024px) {
+        .avis-hero-section {
+            padding: 150px 15px;
+        }
+
+        .avis-hero-content {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+
+        .avis-hero-image-col {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+
+        .avis-hero-title-small {
+            font-size: 17px;
+            line-height: 1.1em;
+        }
+
+        .avis-hero-title-main {
+            font-size: 41px;
+            line-height: 1.1em;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .avis-hero-section {
+            padding: 80px 15px 0;
+        }
+
+        .avis-hero-bg-overlay {
+            background-position: bottom right;
+        }
+
+        .avis-hero-container {
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .avis-hero-content,
+        .avis-hero-image-col {
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding: 0;
+            text-align: center;
+        }
+
+        .avis-hero-image-col {
+            justify-content: center;
+            padding-top: 33px;
+        }
+
+        .avis-hero-title-small {
+            font-size: 12px;
+        }
+
+        .avis-hero-title-main {
+            font-size: 42px;
+        }
+
+        .avis-hero-img {
+            width: 83%;
+        }
+    }
+</style>

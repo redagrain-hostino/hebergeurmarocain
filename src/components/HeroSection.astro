@@ -1,0 +1,263 @@
+﻿---
+
+---
+
+<section class="hero-section">
+			<div class="hero-bg-overlay" aria-hidden="true"></div>
+
+			<div class="hero-shape-bottom" aria-hidden="true">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 1000 100"
+					preserveAspectRatio="none"
+				>
+					<path class="hero-shape-fill" d="M0,100 L1000,0 L1000,100 Z"
+					></path>
+				</svg>
+			</div>
+
+			<div class="hero-container">
+				<div class="hero-content">
+					<h1 class="hero-title">Meilleur hébergeur web au Maroc</h1>
+
+					<h2 class="hero-subtitle">
+						Les 5 meilleurs hébergeurs web pour le Maroc (2025)
+					</h2>
+
+					<div class="hero-author">
+						<img
+							src="/images/reda-nabaoui.png"
+							alt="Reda Nabaoui"
+							width="60"
+							height="60"
+							class="hero-author-img"
+							decoding="async"
+						/>
+						<div class="hero-author-meta">
+							<h3 class="hero-author-name">Reda Nabaoui</h3>
+							<p class="hero-author-date">
+								Dernière mise à jour : 03 janvier 2024
+							</p>
+						</div>
+					</div>
+
+					<p class="hero-paragraph">
+						Bonjour, Je m'appelle Reda! Je suis consultant expert en
+						transformation digitale au Maroc depuis plus de 20 ans
+						et j'ai construit de nombreux sites internet pour des
+						entreprises de taille variée au Maroc.
+					</p>
+					<p class="hero-paragraph">
+						Après des analyses approfondies et la récolte de données
+						pendant 2 ans, j'ai listé les plus meilleurs hébergeurs
+						web au Maroc pour l'année 2025.
+					</p>
+				</div>
+
+				<div class="hero-image-col">
+					<img
+						src="/images/meilleur-hebergement-web-maroc.png"
+						alt="Meilleur Hébergement web au Maroc"
+						width="1200"
+						height="1330"
+						class="hero-img"
+						fetchpriority="high"
+						decoding="async"
+					/>
+				</div>
+			</div>
+		</section> 
+		
+		
+		<style> 	
+		
+	.hero-section {
+		position: relative;
+		background-color: #1e4bb0;
+		overflow: hidden;
+		transition:
+			background 0.3s,
+			border 0.3s,
+			border-radius 0.3s,
+			box-shadow 0.3s;
+		margin-top: 0;
+		margin-bottom: 0;
+		padding: 80px 0 135px;
+		z-index: 1;
+	}
+
+	.hero-bg-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url(https://hebergeurmarocain.com/wp-content/uploads/2022/03/hero-bg.jpg);
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		opacity: 0.14;
+		mix-blend-mode: multiply;
+		transition:
+			background 0.3s,
+			border-radius 0.3s,
+			opacity 0.3s;
+		z-index: 0;
+		pointer-events: none;
+	}
+
+	.hero-shape-bottom {
+		position: absolute;
+		bottom: -1px;
+		left: 0;
+		right: 0;
+		width: 100%;
+		overflow: hidden;
+		line-height: 0;
+		z-index: 1;
+	}
+
+	.hero-shape-bottom svg {
+		display: block;
+		width: 100%;
+		height: 120px;
+	}
+
+	.hero-shape-fill {
+		fill: #ffffff;
+		transform-origin: center;
+		transform: rotateY(0deg);
+	}
+
+	.hero-container {
+		position: relative;
+		z-index: 2;
+		display: flex;
+		align-items: center;
+		gap: 100px;
+		max-width: 1140px;
+		margin-right: auto;
+		margin-left: auto;
+		padding: 0 20px;
+	}
+
+	.hero-content {
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+
+	.hero-title {
+		color: #ffffff;
+		font-family: "Poppins", sans-serif;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 1.2;
+		margin: 0 0 1rem;
+	}
+
+	.hero-subtitle {
+		color: #ffffff;
+		font-family: "Poppins", sans-serif;
+		font-weight: 700;
+		font-size: 44px;
+		line-height: 1.3;
+		margin: 0 0 1.5rem;
+	}
+
+	.hero-author {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.hero-author-img {
+		width: 80px;
+		height: 80px;
+		border-radius: 50%;
+		object-fit: cover;
+		display: block;
+		flex-shrink: 0;
+	}
+
+	.hero-author-name {
+		color: #ffffff;
+		font-family: "Poppins", sans-serif;
+		font-weight: 700;
+		font-size: 20.8px;
+		margin: 0 0 2px;
+	}
+
+	.hero-author-date {
+		color: rgba(255, 255, 255, 0.75);
+		font-family: "Poppins", sans-serif;
+		font-weight: 400;
+		font-size: 14px;
+		margin: 0;
+	}
+
+	.hero-paragraph {
+		color: #ffffff;
+		font-family: "Poppins", sans-serif;
+		font-size: 15px;
+		line-height: 1.7;
+		margin: 0 0 0.67rem;
+	}
+
+	.hero-image-col {
+		flex: 0 0 50%;
+		width: 56%;
+		display: flex;
+		justify-content: center;
+		text-align: right;
+	}
+
+	.hero-img {
+		width: 85%;
+		height: auto;
+		display: block;
+	}
+
+	@media (max-width: 1024px) {
+		.hero-container {
+			max-width: 1024px;
+		}
+
+		.hero-title {
+			font-size: 28px;
+		}
+	}
+
+	@media (max-width: 767px) {
+		.hero-section {
+			padding: 2.25rem 0 100px;
+		}
+
+		.hero-container {
+			flex-direction: column;
+			max-width: 767px;
+			gap: 1.5rem;
+		}
+
+		.hero-content,
+		.hero-image-col {
+			flex: 1 1 100%;
+			max-width: 100%;
+		}
+
+		.hero-image-col {
+			align-items: center;
+		}
+
+		.hero-img {
+			margin-bottom: -20px;
+		}
+
+		.hero-title {
+			font-size: 26px;
+		}
+
+		.hero-subtitle {
+			font-size: 20px;
+		}
+	}\r\n</style>

@@ -1,0 +1,33 @@
+.elementor-849 .elementor-element.elementor-element-16c884b.elementor-column>.elementor-widget-wrap {
+    justify-content:center
+}
+.elementor-849 .elementor-element.elementor-element-8cd3fc7 .wdes-widget-inner {
+    text-align:center
+}
+.elementor-849 .elementor-element.elementor-element-8cd3fc7 .wdes-section-header-primary {
+    color:#242424;
+    font-family:"Poppins",Sans-serif;
+    font-size:45px;
+    font-weight:700;
+    margin:0 0 10px;
+    text-align:center
+}
+.elementor-849 .elementor-element.elementor-element-8cd3fc7 .wdes-section-header-primary:hover {
+    color:var(--e-global-color-secondary)
+}
+.elementor-849 .elementor-element.elementor-element-8cd3fc7>.elementor-widget-container {
+    margin:0 0 40px
+}
+.elementor-849 .elementor-element.elementor-element-8cd3fc7 {
+    width:var(--container-widget-width,520px);
+    max-width:520px;
+    --container-widget-width:520px;
+    --container-widget-flex-grow:0
+}
+.elementor-849 .elementor-element.elementor-element-7410c40 {
+    color:#242424
+}
+.elementor-849 .elementor-element.elementor-element-8cd3fc7 .wdes-section-header-primary {
+    font-size:26px;
+    line-height:1.4em
+}

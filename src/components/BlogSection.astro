@@ -1,0 +1,239 @@
+﻿---
+
+---
+<section class="blog-section">
+		<!-- Top shape divider -->
+		<div class="blog-shape blog-shape-top">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 1000 100"
+				preserveAspectRatio="none"
+			>
+				<path class="blog-shape-fill" d="M0,6V0h1000v100L0,6z"></path>
+			</svg>
+		</div>
+
+		<div class="blog-container">
+			<h2 class="blog-title">Blog</h2>
+
+			<!-- Featured Post -->
+			<div class="blog-post-featured">
+				<a
+					href="https://hebergeurmarocain.com/acheter-un-nom-de-domaine-ma-letape-la-plus-importante-de-sa-creation/"
+					class="blog-post-thumbnail"
+				>
+					<img
+						loading="lazy"
+						decoding="async"
+						src="/images/Acheter-nom-de-domaine-maroc.jpg"
+						alt="Acheter un nom de domaine .ma : l'étape la plus importante de sa création"
+						width="1200"
+						height="800"
+					/>
+				</a>
+				<div class="blog-post-content">
+					<a
+						href="https://hebergeurmarocain.com/acheter-un-nom-de-domaine-ma-letape-la-plus-importante-de-sa-creation/"
+						class="blog-post-title"
+					>
+						Acheter un nom de domaine .ma : l'étape la plus
+						importante de sa création
+					</a>
+					<div class="blog-post-more">
+						<a
+							href="https://hebergeurmarocain.com/acheter-un-nom-de-domaine-ma-letape-la-plus-importante-de-sa-creation/"
+							class="blog-btn-more"
+						>
+							Lire la suite
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Bottom shape divider -->
+		<div class="blog-shape blog-shape-bottom">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 1000 100"
+				preserveAspectRatio="none"
+			>
+				<path class="blog-shape-fill" d="M0,6V0h1000v100L0,6z"></path>
+			</svg>
+		</div>
+	</section>
+	
+	
+	
+	<style> 
+	
+	.blog-section {
+		position: relative;
+		background-color: #f6f9fc;
+		margin-top: 45px;
+		margin-bottom: 0;
+		padding: 180px 0 170px;
+		transition:
+			background 0.3s,
+			border 0.3s,
+			border-radius 0.3s,
+			box-shadow 0.3s;
+	}
+
+	.blog-shape {
+		overflow: hidden;
+		position: absolute;
+		left: 0;
+		width: 100%;
+		line-height: 0;
+		direction: ltr;
+	}
+
+	.blog-shape-top {
+		top: -1px;
+	}
+
+	.blog-shape-top svg {
+		transform: rotate(180deg) translateX(50%);
+		left: 50%;
+		position: relative;
+		display: block;
+		width: calc(100% + 1.3px);
+		height: 80px;
+	}
+
+	.blog-shape-bottom {
+		bottom: -1px;
+	}
+
+	.blog-shape-bottom svg {
+		z-index: -1;
+		display: block;
+		width: calc(100% + 1.3px);
+		height: 80px;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.blog-shape-fill {
+		fill: #ffffff;
+		transform-origin: center;
+		transform: rotate(
+			180deg
+		);
+	}
+
+	.blog-shape-bottom .blog-shape-fill {
+		fill: #fff;
+		transform-origin: center;
+		transform: rotateY(0deg);
+	}
+
+	.blog-container {
+		max-width: 1140px;
+		margin: 0 auto;
+		padding: 0 20px;
+		position: relative;
+		z-index: 2;
+	}
+
+	.blog-title {
+		color: #0a1a3b;
+		font-family: "Montserrat", sans-serif;
+		font-size: 68px;
+		font-weight: 700;
+		margin: 0 0 30px;
+	}
+
+	.blog-post-featured {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		max-width: 45%;
+		border-radius: 5px;
+		overflow: hidden;
+	}
+
+	.blog-post-thumbnail {
+		flex: 0 0 45%;
+		display: block;
+	}
+
+	.blog-post-thumbnail img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
+	}
+
+	.blog-post-content {
+		flex: 0 0 55%;
+		padding-top: 30px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.blog-post-title {
+		color: #122d3e;
+		font-family: "Poppins", sans-serif;
+		font-size: 22px;
+		font-weight: 600;
+		text-decoration: none;
+		margin-bottom: 20px;
+		display: block;
+		line-height: 1.4;
+	}
+
+	.blog-post-title:hover {
+		color: #387bf6;
+	}
+
+	.blog-btn-more {
+		display: inline-block;
+		background-color: #387bf6;
+		color: #fff;
+		padding: 12px 24px;
+		border-radius: 3px;
+		font-family: "Roboto", sans-serif;
+		font-size: 14px;
+		font-weight: 500;
+		text-decoration: none;
+		transition: background-color 0.3s;
+	}
+
+	.blog-btn-more:hover {
+		background-color: #2b61cd;
+		color: #fff;
+	}
+
+	@media (max-width: 1024px) {
+		.blog-section {
+			padding: 125px 15px;
+		}
+	}
+
+	@media (max-width: 767px) {
+		.blog-section {
+			padding: 100px 15px;
+		}
+
+		.blog-title {
+			font-size: 24px;
+		}
+
+		.blog-post-thumbnail,
+		.blog-post-content {
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+
+		.blog-post-thumbnail img {
+			height: auto;
+		}
+
+		.blog-post-content {
+			padding: 20px;
+		}
+	}\r\n</style>
