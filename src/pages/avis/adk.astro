@@ -1,38 +1,37 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import AvisReview from "../../components/AvisReview.astro";
+import AvisBestSeller from "../../components/AvisBestSeller.astro";
 ---
 
-<Layout title="Avis Hostino - Hébergeur Marocain">
-    <section class="hostino-hero-section">
-        <div class="hostino-hero-bg-overlay" aria-hidden="true"></div>
+<Layout title="Avis ADK Media - Hébergeur Marocain">
+    <section class="adk-hero-section">
+        <div class="adk-hero-bg-overlay" aria-hidden="true"></div>
 
-        <div class="hostino-hero-container">
+        <div class="adk-hero-container">
             <!-- Left Column: Text Content -->
-            <div class="hostino-hero-content">
-                <h1 class="hostino-hero-title-small">Hostino</h1>
-                <h2 class="hostino-hero-title-main">Avis Hostino® 2025</h2>
+            <div class="adk-hero-content">
+                <h1 class="adk-hero-title-small">Classement des meilleurs hébergeurs</h1>
+                <h2 class="adk-hero-title-main">Avis ADK Media et test 2025</h2>
             </div>
 
             <!-- Right Column: Logo/Image -->
-            <div class="hostino-hero-image-col">
+            <div class="adk-hero-image-col">
                 <img
-                    fetchpriority="high"
                     decoding="async"
-                    width="1024"
-                    height="236"
-                    src="https://hebergeurmarocain.com/wp-content/uploads/2024/10/hostino-wh-1024x236.png"
-                    alt="Logo Hostino Maroc"
-                    class="hostino-hero-img"
+                    width="204"
+                    height="102"
+                    src="https://hebergeurmarocain.com/wp-content/uploads/2022/12/ADK-MEDIA.png"
+                    alt="ADK Media"
+                    class="adk-hero-img"
                 />
             </div>
         </div>
     </section>
-    <AvisReview />
+    <AvisBestSeller />
 </Layout>
 
 <style>
-    .hostino-hero-section {
+    .adk-hero-section {
         position: relative;
         background-color: #0d1b39;
         overflow: hidden;
@@ -47,7 +46,7 @@ import AvisReview from "../../components/AvisReview.astro";
         z-index: 1;
     }
 
-    .hostino-hero-bg-overlay {
+    .adk-hero-bg-overlay {
         position: absolute;
         top: 0; 
         left: 0;
@@ -68,12 +67,12 @@ import AvisReview from "../../components/AvisReview.astro";
     }
 
     @media (min-width: 1025px) {
-        .hostino-hero-bg-overlay {
+        .adk-hero-bg-overlay {
             background-attachment: fixed;
         }
     }
 
-    .hostino-hero-container {
+    .adk-hero-container {
         position: relative;
         z-index: 2;
         display: flex;
@@ -83,13 +82,13 @@ import AvisReview from "../../components/AvisReview.astro";
         padding: 0 20px;
     }
 
-    .hostino-hero-content {
+    .adk-hero-content {
         flex: 0 0 45%;
         max-width: 45%;
         padding-right: 60px;
     }
 
-    .hostino-hero-title-small {
+    .adk-hero-title-small {
         color: #ffffff;
         font-family: "Poppins", sans-serif;
         font-size: 18px;
@@ -98,7 +97,7 @@ import AvisReview from "../../components/AvisReview.astro";
         margin: 0 0 6px 0;
     }
 
-    .hostino-hero-title-main {
+    .adk-hero-title-main {
         color: #ffffff;
         font-family: "Poppins", sans-serif;
         font-size: 54px;
@@ -107,7 +106,7 @@ import AvisReview from "../../components/AvisReview.astro";
         margin: 0;
     }
 
-    .hostino-hero-image-col {
+    .adk-hero-image-col {
         flex: 0 0 55%;
         max-width: 55%;
         display: flex;
@@ -115,7 +114,7 @@ import AvisReview from "../../components/AvisReview.astro";
         align-items: center;
     }
 
-    .hostino-hero-img {
+    .adk-hero-img {
         width: 36%;
         height: auto;
         display: block;
@@ -123,73 +122,73 @@ import AvisReview from "../../components/AvisReview.astro";
 
     /* Responsive overrides */
     @media (max-width: 1024px) {
-        .hostino-hero-section {
+        .adk-hero-section {
             padding: 150px 15px;
         }
 
-        .hostino-hero-content {
+        .adk-hero-content {
             flex: 0 0 50%;
             max-width: 50%;
             padding-right: 15px;
         }
 
-        .hostino-hero-image-col {
+        .adk-hero-image-col {
             flex: 0 0 50%;
             max-width: 50%;
             padding-left: 15px;
         }
 
-        .hostino-hero-title-small {
+        .adk-hero-title-small {
             font-size: 41px;
             line-height: 1.1em;
         }
 
-        .hostino-hero-title-main {
+        .adk-hero-title-main {
             font-size: 41px;
             line-height: 1.1em;
         }
     }
 
     @media (max-width: 767px) {
-        .hostino-hero-section {
+        .adk-hero-section {
             padding: 80px 25px;
         }
 
-        .hostino-hero-bg-overlay {
+        .adk-hero-bg-overlay {
             background-position: bottom right;
         }
 
-        .hostino-hero-container {
+        .adk-hero-container {
             flex-direction: column;
             gap: 13px;
         }
 
-        .hostino-hero-content,
-        .hostino-hero-image-col {
+        .adk-hero-content,
+        .adk-hero-image-col {
             flex: 0 0 100%;
             max-width: 100%;
             padding: 0;
             text-align: center;
         }
 
-        .hostino-hero-title-small {
+        .adk-hero-title-small {
             font-size: 17px;
             line-height: 1.1em;
             margin: 0;
         }
 
-        .hostino-hero-title-main {
+        .adk-hero-title-main {
             font-size: 54px;
             line-height: 1.1em;
             margin: 0;
         }
 
-        .hostino-hero-image-col {
+        .adk-hero-image-col {
             justify-content: center;
             margin-top: 30px;
         }
         
-        .hostino-hero-img {
+        .adk-hero-img {
             width: 36%;
         }
     }
