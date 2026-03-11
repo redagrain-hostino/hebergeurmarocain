@@ -1,4 +1,5 @@
 ---
+import AvisReviewAdk from "../../components/AvisReviewAdk.astro";
 import Layout from "../../layouts/Layout.astro";
 import AvisBestSeller from "../../components/AvisBestSeller.astro";
 ---
@@ -10,7 +11,9 @@ import AvisBestSeller from "../../components/AvisBestSeller.astro";
         <div class="adk-hero-container">
             <!-- Left Column: Text Content -->
             <div class="adk-hero-content">
-                <h1 class="adk-hero-title-small">Classement des meilleurs hébergeurs</h1>
+                <h1 class="adk-hero-title-small">
+                    Classement des meilleurs hébergeurs
+                </h1>
                 <h2 class="adk-hero-title-main">Avis ADK Media et test 2025</h2>
             </div>
 
@@ -28,6 +31,7 @@ import AvisBestSeller from "../../components/AvisBestSeller.astro";
         </div>
     </section>
     <AvisBestSeller />
+    <AvisReviewAdk />
 </Layout>
 
 <style>
