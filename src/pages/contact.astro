@@ -1,0 +1,504 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Contact - Hébergeur Marocain">
+
+    <!-- ═══════════ HERO ═══════════ -->
+    <section class="ct-hero">
+        <div class="ct-hero-bg" aria-hidden="true"></div>
+        <div class="ct-hero-inner">
+            <h1 class="ct-hero-title">Contactez-nous</h1>
+            <p class="ct-hero-sub">
+                Une question sur l'hébergement web au Maroc ?<br />Nous sommes là pour vous répondre.
+            </p>
+        </div>
+        <div class="ct-shape ct-shape-bottom" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+                <path class="ct-shape-fill" d="M0,6V0h1000v100L0,6z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ═══════════ INFO CARDS ═══════════ -->
+    <section class="ct-cards-section">
+        <div class="ct-container">
+            <div class="ct-cards">
+                <div class="ct-card">
+                    <div class="ct-card-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="ct-card-title">Email</h3>
+                    <p class="ct-card-text">
+                        <a href="mailto:contact@hebergeurmarocain.com" class="ct-card-link">
+                            contact@hebergeurmarocain.com
+                        </a>
+                    </p>
+                </div>
+
+                <div class="ct-card">
+                    <div class="ct-card-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="ct-card-title">Localisation</h3>
+                    <p class="ct-card-text">Maroc</p>
+                </div>
+
+                <div class="ct-card">
+                    <div class="ct-card-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="ct-card-title">Disponibilité</h3>
+                    <p class="ct-card-text">Lun – Ven : 9h00 – 18h00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ FORM SECTION ═══════════ -->
+    <section class="ct-form-section">
+        <div class="ct-container">
+            <div class="ct-form-wrapper">
+                <div class="ct-form-header">
+                    <h2 class="ct-form-title">Envoyez-nous un message</h2>
+                    <p class="ct-form-subtitle">
+                        Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.
+                    </p>
+                </div>
+
+                <form id="contact-form" class="ct-form" novalidate>
+                    <div class="ct-form-row">
+                        <div class="ct-form-group">
+                            <label for="first-name" class="ct-label">Prénom <span class="ct-req">*</span></label>
+                            <input id="first-name" name="first_name" type="text" class="ct-input" placeholder="Votre prénom" required />
+                        </div>
+                        <div class="ct-form-group">
+                            <label for="last-name" class="ct-label">Nom <span class="ct-req">*</span></label>
+                            <input id="last-name" name="last_name" type="text" class="ct-input" placeholder="Votre nom de famille" required />
+                        </div>
+                    </div>
+
+                    <div class="ct-form-group">
+                        <label for="email" class="ct-label">E-mail <span class="ct-req">*</span></label>
+                        <input id="email" name="email" type="email" class="ct-input" placeholder="votre@email.com" required />
+                    </div>
+
+                    <div class="ct-form-group">
+                        <label for="subject" class="ct-label">Sujet <span class="ct-req">*</span></label>
+                        <select id="subject" name="subject" class="ct-input ct-select" required>
+                            <option value="" disabled selected>Sélectionnez un sujet</option>
+                            <option value="hebergement">Question sur l'hébergement</option>
+                            <option value="comparatif">Comparatif des hébergeurs</option>
+                            <option value="avis">Partager un avis</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
+
+                    <div class="ct-form-group">
+                        <label for="message" class="ct-label">Message <span class="ct-req">*</span></label>
+                        <textarea id="message" name="message" class="ct-input ct-textarea" placeholder="Écrivez votre message ici..." rows="6" required></textarea>
+                    </div>
+
+                    <div class="ct-form-footer">
+                        <p class="ct-form-note"><span class="ct-req">*</span> Champs obligatoires</p>
+                        <button type="submit" id="submit-btn" class="ct-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            <span class="ct-btn-text">Envoyer le message</span>
+                        </button>
+                    </div>
+
+                    <div id="form-success" class="ct-success" aria-live="polite">
+                        <i class="fas fa-check-circle"></i>
+                        <p>Votre message a bien été envoyé. Nous vous répondrons très prochainement !</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+</Layout>
+
+<style>
+/* ─────────────────────────────────────────
+   TOKENS (aligned with site design system)
+───────────────────────────────────────── */
+:root {
+    --ct-dark:    #0d1b39;
+    --ct-mid:     #0a1a3b;
+    --ct-sub:     rgba(10,26,59,.65);
+    --ct-bg:      #f5f8fe;
+    --ct-white:   #ffffff;
+    --ct-green:   #51c726;
+    --ct-border:  #e2e8f0;
+    --ct-font-h:  "Poppins", sans-serif;
+    --ct-font-b:  "Montserrat", sans-serif;
+}
+
+/* ─────────────────────────────────────────
+   HERO
+───────────────────────────────────────── */
+.ct-hero {
+    position: relative;
+    background-color: #2f5ab9;
+    overflow: hidden;
+    padding: 100px 0 160px;
+    z-index: 1;
+}
+
+.ct-hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url("https://hebergeurmarocain.com/wp-content/uploads/2022/03/hero-bg.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .14;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.ct-hero-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.ct-hero-title {
+    color: var(--ct-white);
+    font-family: var(--ct-font-h);
+    font-size: 68px;
+    font-weight: 800;
+    line-height: 1.15em;
+    margin: 0 0 20px;
+}
+
+.ct-hero-sub {
+    color: rgba(255,255,255,.85);
+    font-family: var(--ct-font-h);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.7em;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+/* Bottom wave */
+.ct-shape {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+    direction: ltr;
+}
+.ct-shape-bottom { bottom: -1px; transform: rotate(180deg); }
+.ct-shape-bottom svg {
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 80px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%) rotateY(180deg);
+}
+.ct-shape-fill { fill: var(--ct-bg); }
+
+/* ─────────────────────────────────────────
+   SHARED CONTAINER
+───────────────────────────────────────── */
+.ct-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ─────────────────────────────────────────
+   INFO CARDS
+───────────────────────────────────────── */
+.ct-cards-section {
+    background-color: var(--ct-bg);
+    padding: 60px 0 20px;
+}
+
+.ct-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.ct-card {
+    background: var(--ct-white);
+    border-radius: 12px;
+    padding: 36px 28px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,.06);
+    transition: transform .25s, box-shadow .25s;
+}
+
+.ct-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 28px rgba(0,0,0,.10);
+}
+
+.ct-card-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--ct-dark), #1e3a7a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px;
+}
+
+.ct-card-icon i {
+    font-size: 22px;
+    color: var(--ct-white);
+}
+
+.ct-card-title {
+    color: var(--ct-dark);
+    font-family: var(--ct-font-h);
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 10px;
+}
+
+.ct-card-text {
+    color: var(--ct-sub);
+    font-family: var(--ct-font-b);
+    font-size: 15px;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.ct-card-link {
+    color: var(--ct-dark);
+    font-weight: 700;
+    text-decoration: none;
+    transition: color .2s;
+}
+.ct-card-link:hover { color: var(--ct-green); }
+
+/* ─────────────────────────────────────────
+   FORM SECTION
+───────────────────────────────────────── */
+.ct-form-section {
+    background-color: var(--ct-bg);
+    padding: 40px 0 100px;
+}
+
+.ct-form-wrapper {
+    background: var(--ct-white);
+    border-radius: 16px;
+    padding: 56px 60px;
+    box-shadow: 0 4px 30px rgba(13,27,57,.07);
+}
+
+.ct-form-header { margin-bottom: 40px; }
+
+.ct-form-title {
+    color: var(--ct-dark);
+    font-family: var(--ct-font-h);
+    font-size: 32px;
+    font-weight: 800;
+    margin: 0 0 12px;
+}
+
+.ct-form-subtitle {
+    color: var(--ct-sub);
+    font-family: var(--ct-font-b);
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Fields */
+.ct-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.ct-form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 22px;
+}
+
+.ct-label {
+    color: var(--ct-dark);
+    font-family: var(--ct-font-h);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    letter-spacing: .02em;
+}
+
+.ct-req { color: #e53e3e; }
+
+.ct-input {
+    border: 2px solid var(--ct-border);
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-family: var(--ct-font-b);
+    font-size: 15px;
+    color: var(--ct-dark);
+    background: #f8fafc;
+    outline: none;
+    transition: border-color .25s, box-shadow .25s;
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.ct-input:focus {
+    border-color: #2f5ab9;
+    box-shadow: 0 0 0 3px rgba(47,90,185,.12);
+    background: var(--ct-white);
+}
+
+.ct-input::placeholder { color: #a0aec0; }
+
+.ct-select {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='%230d1b39' d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 18px;
+    padding-right: 42px;
+}
+
+.ct-textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+/* Footer + button */
+.ct-form-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.ct-form-note {
+    color: #a0aec0;
+    font-size: 13px;
+    font-family: var(--ct-font-b);
+    margin: 0;
+}
+
+/* CTA button — same green style as site */
+.ct-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 13px;
+    color: var(--ct-white);
+    font-family: var(--ct-font-h);
+    font-size: 17px;
+    font-weight: 600;
+    background-color: var(--ct-green);
+    border: none;
+    border-radius: 30px;
+    padding: 14px 50px;
+    cursor: pointer;
+    transition: background-color .25s, transform .2s;
+}
+
+.ct-btn:hover {
+    background-color: #45b31f;
+    transform: translateY(-1px);
+}
+
+.ct-btn:active { transform: translateY(0); }
+
+/* Success message */
+.ct-success {
+    display: none;
+    align-items: center;
+    gap: 12px;
+    background: #f0fff4;
+    border: 2px solid var(--ct-green);
+    border-radius: 10px;
+    padding: 18px 24px;
+    margin-top: 24px;
+    color: #276749;
+    font-family: var(--ct-font-b);
+    font-size: 15px;
+}
+
+.ct-success.visible { display: flex; }
+
+.ct-success i {
+    font-size: 24px;
+    color: var(--ct-green);
+    flex-shrink: 0;
+}
+
+.ct-success p { margin: 0; }
+
+/* ─────────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .ct-form-wrapper { padding: 40px 36px; }
+}
+
+@media (max-width: 767px) {
+    .ct-hero { padding: 80px 0 130px; }
+    .ct-hero-title { font-size: 40px; }
+    .ct-hero-sub { font-size: 16px; }
+
+    .ct-cards { grid-template-columns: 1fr; }
+
+    .ct-form-row { grid-template-columns: 1fr; }
+
+    .ct-form-wrapper { padding: 28px 20px; }
+
+    .ct-form-title { font-size: 24px; }
+
+    .ct-form-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .ct-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 1025px) {
+    .ct-hero-bg { background-attachment: fixed; }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contact-form') as HTMLFormElement | null;
+    const successMsg = document.getElementById('form-success');
+    const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement | null;
+
+    form?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const btnText = submitBtn?.querySelector('.ct-btn-text');
+        if (btnText) btnText.textContent = 'Envoi en cours…';
+        if (submitBtn) submitBtn.disabled = true;
+
+        setTimeout(() => {
+            successMsg?.classList.add('visible');
+            form.reset();
+            if (btnText) btnText.textContent = 'Envoyer le message';
+            if (submitBtn) submitBtn.disabled = false;
+            successMsg?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 1200);
+    });
+});
+</script>

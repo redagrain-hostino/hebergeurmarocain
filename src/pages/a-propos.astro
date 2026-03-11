@@ -1,0 +1,473 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="À propos - Hébergeur Marocain">
+
+    <!-- ═══════════ HERO SECTION ═══════════ -->
+    <section class="ap-hero">
+        <div class="ap-hero-bg" aria-hidden="true"></div>
+
+        <!-- top shape -->
+        <div class="ap-shape ap-shape-top" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+                <path class="ap-shape-fill" d="M0,6V0h1000v100L0,6z"></path>
+            </svg>
+        </div>
+
+        <div class="ap-hero-inner">
+            <!-- Left: main headline -->
+            <div class="ap-hero-left">
+                <div class="ap-header-widget">
+                    <h1 class="ap-hero-title">À propos</h1>
+                    <p class="ap-hero-desc">
+                        Un outil de comparaison des services d'hébergement web au Maroc enfin fiable et honnête
+                    </p>
+                </div> 
+                <!-- Sub-label -->
+                <div class="ap-sub-label">
+                    <h3 class="ap-sub-title">Réda Nabaoui</h3>
+                </div>
+            </div>
+
+            <!-- Right: author card -->
+            <div class="ap-hero-right">
+                <div class="ap-author-row">
+                    <!-- Author avatar -->
+                    <div class="ap-author-img-col">
+                        <img
+                            decoding="async"
+                            width="190"
+                            height="191"
+                            src="/images/reda-nabaoui.png"
+                            class="ap-author-img"
+                            alt="Reda Nabaoui"
+                        />
+                    </div>
+                    <!-- Author info -->
+                    <div class="ap-author-info-col">
+                        <h3 class="ap-author-name">Reda Nabaoui</h3>
+                        <p class="ap-author-date">Dernière mise à jour : 25 Octobre 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ CONTENT SECTION ═══════════ -->
+    <section class="ap-content">
+        <div class="ap-content-bg" aria-hidden="true"></div>
+
+        <div class="ap-content-inner">
+            <!-- Article text -->
+            <div class="ap-text-col">
+                <p class="ap-body-text">Salut! Je suis Réda et j'ai créé hebergeurmarocain.com pour partager mes connaissances et mon expertise en matière d'hébergement web au Maroc avec les gens.</p>
+                <p class="ap-body-text">Mon comparatif différent par rapport à de nombreux autres sites qui vous donnent des informations fausses et trompeuses.</p>
+                <p class="ap-body-text">Je cherchais un hébergeur web au Maroc et pour trouver celui qui me conviendrait le mieux, j'ai consulté plusieurs sites comparatifs qui classaient différents hébergeurs web.&nbsp;</p>
+                <p class="ap-body-text">J'ai choisi mon hébergeur en me fiant aux notes de ces sites comparatifs, car je les croyais honnêtes.</p>
+                <p class="ap-body-text">Après avoir examiné plusieurs de ces comparatifs, j'ai pensé avoir une bonne idée du fournisseur web qui répondrait le mieux à mes besoins. J'ai transféré tout mon contenu, fichiers et bases de données avec une grande confiance dans mon choix.</p>
+                <p class="ap-body-text">Mais rapidement, j'ai compris que l'hébergeur que j'avais choisi n'était pas aussi performant que ce qui m'avait été promis. Le temps de disponibilité de mon site était bien inférieur à ce qui avait été annoncé. Lorsque mon site devenait inaccessible, j'envoyais un message de demande d'assistance et j'attendais longtemps une réponse de leur part. Souvent, les «&nbsp;techniciens&nbsp;» n'avaient pas la moindre idée de comment résoudre mon problème!</p>
+                <p class="ap-body-text">Malheureusement, ce n'est pas arrivé qu'une seule fois… J'ai essayé d'autres hébergeurs web et j'ai rencontré des problèmes similaires.</p>
+                <p class="ap-body-text">Au cours de mes années en tant que développeur web, j'ai travaillé sur des projets de sites internet très variés, allant d'un simple site de présentation d'un artiste peintre à une boutique en ligne recevant plusieurs dizaines de milliers de visites chaque mois. J'ai eu l'occasion de tester de nombreux fournisseurs d'hébergement web au Maroc (et ailleurs).</p>
+                <p class="ap-body-text">Aujourd'hui, j'ai ma propre opinion sur ce qui caractérise un bon hébergeur web et selon quels critères. Après plus de 10 ans d'expérience, j'ai décidé de partager avec vous mon top 6 des hébergeurs web préférés au Maroc.</p>
+                <p class="ap-body-text">Certains proposent un service bilingue en français et en anglais, tandis que d'autres ne proposent qu'un service en anglais.</p>
+                <p class="ap-body-text">Certains facturent en dirhams et d'autres en euro. Bref, il y a de quoi faire votre choix en fonction de vos besoins.</p>
+                <p class="ap-body-text">J'ai volontairement sélectionné seulement 6 hébergeurs pour vous présenter.</p>
+                <p class="ap-body-text">Je ne vois pas l'intérêt de vous présenter une longue liste interminable d'hébergeurs. hebergeurmarocain.com n'est pas un annuaire d'hébergeurs, mais un comparatif des 6 meilleurs <a class="ap-inline-link" href="/">hébergeurs web au Maroc</a>!</p>
+            </div>
+
+            <!-- CTA -->
+            <div class="ap-cta-wrap">
+                <h3 class="ap-cta-title">Prêt à trouver votre hébergeur?</h3>
+                <a class="ap-cta-btn" href="/">
+                    <i aria-hidden="true" class="fas fa-angle-double-right"></i>
+                    <span>Meilleur hébergeur web au maroc</span>
+                </a>
+            </div>
+
+            <!-- Star ratings -->
+            <div class="ap-stars-wrap kksr-align-center">
+                <div class="kksr-stars">
+                    <div class="kksr-stars-inactive">
+                        {[1,2,3,4,5].map(n => (
+                            <div class="kksr-star" style="padding-right: 5px"><div class="kksr-icon" style="width: 24px; height: 24px;"></div></div>
+                        ))}
+                    </div>
+                    <div class="kksr-stars-active" style="width: 133.8px;">
+                        {[1,2,3,4,5].map(n => (
+                            <div class="kksr-star" style="padding-right: 5px"><div class="kksr-icon" style="width: 24px; height: 24px;"></div></div>
+                        ))}
+                    </div>
+                </div>
+                <div class="kksr-legend">4.7/5 - (7 votes)</div>
+            </div>
+        </div>
+
+        <!-- bottom shape -->
+        <div class="ap-shape ap-shape-bottom" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+                <path class="ap-shape-fill" d="M0,6V0h1000v100L0,6z"></path>
+            </svg>
+        </div>
+    </section>
+
+</Layout>
+
+<style>
+/* ═══════════════════════════════════════════════
+   TOKENS  (from autoptimize_single_cb9f3b…css)
+═══════════════════════════════════════════════ */
+:root {
+    --ap-bg:        #f5f8fe;
+    --ap-title:     #0d1b39;
+    --ap-sub:       #0a1a3b;
+    --ap-text:      rgba(10,26,59,.965);   /* #0A1A3BF7 */
+    --ap-muted:     rgba(10,26,59,.455);   /* #0A1A3B74 */
+    --ap-date:      rgba(10,26,59,.455);   /* #0A1A3B7A */
+    --ap-green:     #51c726;
+    --ap-font-head: "Poppins", sans-serif;
+    --ap-font-body: "Montserrat", sans-serif;
+}
+
+/* ═══════════════════════════════════════════════
+   SHARED: shapes, bg overlay
+═══════════════════════════════════════════════ */
+.ap-hero, .ap-content {
+    position: relative;
+    background-color: var(--ap-bg);
+    transition: background .3s, border .3s, border-radius .3s, box-shadow .3s;
+    z-index: 1;
+}
+
+.ap-hero-bg, .ap-content-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url("https://hebergeurmarocain.com/wp-content/uploads/2022/03/hero-bg.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .14;
+    mix-blend-mode: multiply;
+    transition: background 0s, border-radius .3s, opacity 0s;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.ap-shape {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+    direction: ltr;
+    z-index: 1;
+}
+.ap-shape-top  { top: -1px; }
+.ap-shape-bottom { bottom: -1px; transform: rotate(180deg); }
+
+.ap-shape svg {
+    display: block;
+    width: calc(100% + 1.3px);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%) rotateY(180deg);
+}
+.ap-shape-top svg  { height: 59px; }
+.ap-shape-bottom svg { height: 62px; transform: translateX(-50%) rotateY(180deg); }
+
+.ap-shape-fill { fill: #ffffff; transform-origin: center; }
+
+/* ═══════════════════════════════════════════════
+   HERO SECTION
+═══════════════════════════════════════════════ */
+.ap-hero {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 100px 0 0;
+}
+
+.ap-hero-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Left column — 50% width */
+.ap-hero-left {
+    flex: 0 0 50%;
+    max-width: 50%;
+    text-align: center;        /* center within column per CSS: text-align:center */
+    padding: 0 60px 0 0;       /* elementor-element-6be1f901 padding */
+}
+
+.ap-header-widget { margin: 15px 0; }
+
+/* h1 — from .wdes-section-header-primary */
+.ap-hero-title {
+    color: var(--ap-title);
+    font-family: var(--ap-font-head);
+    font-size: 68px;
+    font-weight: 800;
+    line-height: 1.2em;
+    margin: 0 0 20px;
+    text-align: left;
+}
+
+/* description under title */
+.ap-hero-desc {
+    color: #ffffff; /* kept original: #fff on dark bg, but section is #f5f8fe so we'll make it sub-text */
+    color: rgba(13,27,57,.7);
+    font-family: var(--ap-font-head);
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.8em;
+    margin: 0;
+    text-align: left;
+}
+
+/* sub-label: "Réda Nabaoui" heading style */
+.ap-sub-label { margin: 0 0 15px; padding: 0; }
+.ap-sub-title {
+    color: var(--ap-sub);
+    font-family: var(--ap-font-body);
+    font-size: 27px;
+    font-weight: 700;
+    text-align: left;
+    display: none; /* hidden — name shown in author card */
+}
+
+/* Right column — 50% */
+.ap-hero-right {
+    flex: 0 0 50%;
+    max-width: 50%;
+    text-align: center;
+    padding: 0 60px 0 0;
+}
+
+/* Author row — image 16% + info 84% */
+.ap-author-row {
+    display: flex;
+    align-items: center;
+    padding: 20px 24px;
+    gap: 20px;
+}
+
+.ap-author-img-col { flex: 0 0 20%; text-align: left; }
+.ap-author-img {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+    border-radius: 50%;
+    display: block;
+}
+
+.ap-author-info-col {
+    flex: 0 0 84%;
+    text-align: left;
+}
+
+.ap-author-name {
+    color: var(--ap-title);
+    font-family: var(--ap-font-head);
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 4px;
+}
+
+.ap-author-date {
+    color: var(--ap-date);
+    font-family: var(--ap-font-head);
+    font-size: 13px;
+    font-weight: 400;
+    margin: 0;
+}
+
+/* ═══════════════════════════════════════════════
+   CONTENT SECTION
+═══════════════════════════════════════════════ */
+.ap-content {
+    margin-top: 0;
+    margin-bottom: 100px;
+    padding: 20px 0 120px;
+}
+
+.ap-content-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Body text — .elementor-element-01a297a */
+.ap-body-text {
+    color: var(--ap-text);
+    font-family: var(--ap-font-body);
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.8;
+    margin: 0 0 18px;
+}
+
+.ap-inline-link {
+    color: var(--ap-sub);
+    font-weight: 700;
+    text-decoration: underline;
+    transition: color .3s;
+}
+.ap-inline-link:hover { color: var(--ap-green); }
+
+/* CTA heading — .wdes-section-header-primary (content section) */
+.ap-cta-wrap { margin: 40px 0 30px; }
+
+.ap-cta-title {
+    color: var(--ap-sub);
+    font-family: var(--ap-font-body);
+    font-size: 27px;
+    font-weight: 700;
+    margin: 0 0 15px;
+    padding: 0;
+}
+
+/* CTA button — .elementor-element-6c1ca70 */
+.ap-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: row-reverse; /* icon first (right), text second */
+    gap: 13px;
+    color: #ffffff;
+    font-family: var(--ap-font-head);
+    font-size: 21px;
+    font-weight: 500;
+    background-color: var(--ap-green);
+    border-radius: 30px;
+    padding: 15px 100px;
+    text-decoration: none;
+    transition: background-color .3s, opacity .3s;
+}
+.ap-cta-btn:hover, .ap-cta-btn:focus { background-color: var(--ap-green); opacity: .88; }
+
+/* ═══════════════════════════════════════════════
+   STAR RATINGS
+═══════════════════════════════════════════════ */
+.ap-stars-wrap {
+    margin-top: 30px;
+}
+
+.kksr-align-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.kksr-stars {
+    position: relative;
+    display: inline-block;
+    width: 133.8px;
+    height: 24px;
+}
+
+.kksr-stars-inactive,
+.kksr-stars-active {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.kksr-stars-active { overflow: hidden; }
+
+.kksr-icon {
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.kksr-stars-inactive .kksr-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23d3d3d3' d='M12 17.27l6.18 3.73-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z'/%3E%3C/svg%3E");
+}
+.kksr-stars-active .kksr-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23ffc107' d='M12 17.27l6.18 3.73-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z'/%3E%3C/svg%3E");
+}
+
+.kksr-legend {
+    margin-top: 10px;
+    font-size: 14px;
+    font-family: var(--ap-font-body);
+    color: var(--ap-muted);
+}
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE — 1024px breakpoint
+═══════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+    .ap-hero { padding: 150px 15px; }
+    .ap-content { padding: 150px 15px; }
+
+    .ap-hero-inner { flex-wrap: wrap; }
+
+    .ap-hero-left,
+    .ap-hero-right {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 0 15px 0 0;
+    }
+
+    .ap-hero-title { font-size: 34px; }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    .ap-hero-left,
+    .ap-hero-right {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE — 767px breakpoint
+═══════════════════════════════════════════════ */
+@media (max-width: 767px) {
+    .ap-hero-bg { background-position: bottom right; }
+    .ap-hero { padding: 60px 15px 0; }
+
+    .ap-hero-inner { flex-direction: column; gap: 24px; }
+
+    .ap-hero-left,
+    .ap-hero-right {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .ap-hero-title {
+        font-size: 42px;
+        line-height: 1.4em;
+    }
+
+    .ap-author-img-col { flex: 0 0 28%; }
+
+    .ap-content { padding: 20px 15px 125px; }
+    .ap-content-bg { background-position: bottom right; }
+
+    .ap-cta-title { font-size: 24px; }
+    .ap-cta-btn {
+        font-size: 15px;
+        padding: 12px 40px;
+    }
+}
+
+/* Fixed bg parallax on desktop */
+@media (min-width: 1025px) {
+    .ap-hero-bg, .ap-content-bg {
+        background-attachment: fixed;
+    }
+}
+</style>

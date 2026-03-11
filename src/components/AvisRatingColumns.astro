@@ -38,13 +38,18 @@
                     src="https://s.w.org/images/core/emoji/14.0.0/svg/2b50.svg"
                 /> 9.8/10
             </div>
-            <div class="rating-btn-wrap-center">
+            <div class="rating-hostino-btn-wrap">
                 <a
-                    class="rating-btn rating-btn-primary"
+                    class="rating-hostino-btn"
                     href="https://www.hostino.ma/"
+                    target="_blank"
+                    rel="noopener"
                 >
-                    <span class="rating-btn-text">Visiter Hostino</span>
-                    <i aria-hidden="true" class="fas fa-angle-double-right"></i>
+                    <span class="rating-hostino-btn-icon">
+                        <i aria-hidden="true" class="fas fa-angle-double-right"
+                        ></i>
+                    </span>
+                    <span class="rating-hostino-btn-text">Visiter Hostino</span>
                 </a>
             </div>
             <div class="rating-divider rating-divider-light"></div>
@@ -62,13 +67,17 @@
                     au Maroc (90000).
                 </p>
             </div>
-            <div class="rating-btn-wrap-right">
+            <div class="rating-lire-btn-wrap">
                 <a
-                    class="rating-btn rating-btn-secondary-light"
-                    href="https://hebergeurmarocain.com/avis/hostino"
+                    class="rating-lire-btn"
+                    style="background-color:  #51c726;"
+                    href="/avis/hostino"
                 >
-                    <span class="rating-btn-text">Lire l'avis</span>
-                    <i aria-hidden="true" class="fas fa-angle-double-right"></i>
+                    <span class="rating-lire-btn-text">Lire l'avis</span>
+                    <span class="rating-lire-btn-icon"
+                        ><i aria-hidden="true" class="fas fa-angle-double-right"
+                        ></i></span
+                    >
                 </a>
             </div>
         </div>
@@ -107,13 +116,13 @@
                     les hébergeurs répertoriés, ADK MEDIA est le plus ancien.
                 </p>
             </div>
-            <div class="rating-btn-wrap-right">
-                <a
-                    class="rating-btn rating-btn-secondary-dark"
-                    href="https://hebergeurmarocain.com/avis/adk"
-                >
-                    <span class="rating-btn-text">Lire l'avis</span>
-                    <i aria-hidden="true" class="fas fa-angle-double-right"></i>
+            <div class="rating-lire-btn-wrap">
+                <a class="rating-lire-btn" href="/avis/adk">
+                    <span class="rating-lire-btn-text">Lire l'avis</span>
+                    <span class="rating-lire-btn-icon"
+                        ><i aria-hidden="true" class="fas fa-angle-double-right"
+                        ></i></span
+                    >
                 </a>
             </div>
         </div>
@@ -126,11 +135,11 @@
     .rating-columns-section {
         padding: 50px 0;
     }
- 
+
     .rating-container {
         display: flex;
         flex-wrap: wrap;
-          max-width: 1140px;
+        max-width: 1140px;
         margin: 0 auto;
         padding: 0 15px;
     }
@@ -138,6 +147,7 @@
     .rating-col {
         display: flex;
         flex-direction: column;
+        justify-content: center;
     }
 
     /* --- Hostino Column --- */
@@ -204,8 +214,8 @@
         margin: 0;
     }
     .rating-score-light img.emoji {
-        width: 1em;
-        height: 1em;
+        width: 3em;
+        height: 3em;
     }
 
     .rating-btn-wrap-center {
@@ -264,7 +274,70 @@
         flex-direction: row-reverse;
     }
 
+    /* --- Visiter Hostino button (primary) ---
+       Source: .elementor-element-ba56a77 .elementor-button */
+    .rating-hostino-btn-wrap {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .rating-hostino-btn {
+        display: inline-flex;
+        align-items: center;
+        flex-direction: row-reverse; /* icon on right */
+        gap: 13px;
+        color: #ffffff;
+        font-family: "Poppins", sans-serif;
+        font-size: 21px;
+        font-weight: 500;
+        background-color: #51c726;
+        border-radius: 30px;
+        padding: 15px 80px;
+        text-decoration: none;
+        transition:
+            transform 0.3s,
+            background-color 0.3s;
+    }
+
+    .rating-hostino-btn:hover,
+    .rating-hostino-btn:focus {
+        background-color: #51c726;
+        transform: scale(0.93);
+    }
+
+    /* --- Lire l'avis button (secondary) ---
+       Source: .elementor-element-5c2b396 .elementor-button */
+    .rating-lire-btn-wrap {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .rating-lire-btn {
+        display: inline-flex;
+        align-items: center;
+        flex-direction: row-reverse; /* icon on right */
+        gap: 13px;
+        color: #ffffff;
+        font-family: "Poppins", sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        background-color: #a5a5a5;
+        border-radius: 20px;
+        padding: 10px 50px;
+        text-decoration: none;
+        transition:
+            transform 0.3s,
+            background-color 0.3s;
+    }
+
+    .rating-lire-btn:hover,
+    .rating-lire-btn:focus {
+        background-color: #a5a5a5;
+        transform: scale(0.93);
+    }
+
     /* --- ADK Media Column --- */
+
     .rating-adk {
         width: calc(40% - 20px);
         background-color: #ffffff;
