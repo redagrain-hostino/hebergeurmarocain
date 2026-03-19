@@ -1,4 +1,4 @@
-﻿---
+---
 import AvisClassement from "./AvisClassement.astro";
 
 ---
@@ -122,7 +122,7 @@ import AvisClassement from "./AvisClassement.astro";
             <div class="review-btn-wrap-right" style="margin-top: 20px;">
                 <a
                     class="review-btn-visit-lg"
-                    href="https://hebergeurmarocain.com/go/clouder"
+                    href="/avis/clouder"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
@@ -189,7 +189,7 @@ import AvisClassement from "./AvisClassement.astro";
                 </div>
                 <a
                     class="review-btn-visit"
-                    href="https://hebergeurmarocain.com/go/clouder"
+                    href="/avis/clouder"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
@@ -230,14 +230,14 @@ import AvisClassement from "./AvisClassement.astro";
 <style>
     /* Layout */
     .review-section {
-        padding: 120px 0;
+        padding: 80px 0;
         background-color: #ffffff;
     }
 
     .review-container {
         max-width: 1140px;
         margin: 0 auto;
-        padding: 0 15px;
+        padding: 0 20px;
         display: flex;
         flex-wrap: wrap;
         gap: 30px;
@@ -479,7 +479,6 @@ import AvisClassement from "./AvisClassement.astro";
         background-color: rgba(220, 53, 69, 0.1);
     }
 
-    /* Responsive */
     @media (max-width: 1024px) {
         .review-main {
             flex: 0 0 100%;
@@ -499,17 +498,48 @@ import AvisClassement from "./AvisClassement.astro";
     }
 
     @media (max-width: 767px) {
+        .review-section {
+            padding: 50px 0;
+        }
+
         .review-title {
-            font-size: 32px;
+            font-size: 26px;
         }
 
         .review-subtitle {
-            font-size: 24px;
+            font-size: 20px;
+        }
+
+        .review-content {
+            font-size: 15px;
+        }
+
+        .review-btn-visit {
+            font-size: 15px;
+            padding: 10px 24px;
+        }
+
+        .review-btn-visit-lg {
+            font-size: 17px;
+            padding: 10px 30px;
         }
 
         .review-btn-wrap-right,
         .review-btn-wrap-left {
             text-align: center;
+        }
+
+        .sidebar-card {
+            padding: 20px 16px;
+        }
+
+        .sidebar-score-large {
+            font-size: 30px;
+        }
+
+        .sidebar-score-large .emoji {
+            width: 36px;
+            height: 36px;
         }
     }
 </style>

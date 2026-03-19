@@ -1,4 +1,4 @@
-﻿---
+---
 import AvisClassement from "./AvisClassement.astro";
 
 ---
@@ -447,14 +447,14 @@ import AvisClassement from "./AvisClassement.astro";
 <style>
     /* Layout */
     .review-section {
-        padding: 120px 0;
+        padding: 80px 0;
         background-color: #ffffff;
     }
 
     .review-container {
         max-width: 1140px;
         margin: 0 auto;
-        padding: 0 15px;
+        padding: 0 20px;
         display: flex;
         flex-wrap: wrap;
         gap: 30px;
@@ -716,17 +716,52 @@ import AvisClassement from "./AvisClassement.astro";
     }
 
     @media (max-width: 767px) {
+        .review-section {
+            padding: 50px 0;
+        }
+
         .review-title {
-            font-size: 32px;
+            font-size: 26px;
         }
 
         .review-subtitle {
-            font-size: 24px;
+            font-size: 20px;
+        }
+
+        .review-rating {
+            font-size: 26px;
+        }
+
+        .review-content {
+            font-size: 15px;
+        }
+
+        .review-btn-visit {
+            font-size: 15px;
+            padding: 10px 24px;
+        }
+
+        .review-btn-visit-lg {
+            font-size: 17px;
+            padding: 10px 30px;
         }
 
         .review-btn-wrap-right,
         .review-btn-wrap-left {
             text-align: center;
+        }
+
+        .sidebar-card {
+            padding: 20px 16px;
+        }
+
+        .sidebar-score-large {
+            font-size: 30px;
+        }
+
+        .sidebar-score-large .emoji {
+            width: 36px;
+            height: 36px;
         }
     }
 </style>

@@ -1,4 +1,4 @@
-﻿---
+---
 import Layout from "../../layouts/Layout.astro";
 import AvisReview from "../../components/AvisReview.astro";
 ---
@@ -152,7 +152,7 @@ import AvisReview from "../../components/AvisReview.astro";
 
     @media (max-width: 767px) {
         .hostino-hero-section {
-            padding: 80px 25px;
+            padding: 50px 20px;
         }
 
         .hostino-hero-bg-overlay {
@@ -161,7 +161,8 @@ import AvisReview from "../../components/AvisReview.astro";
 
         .hostino-hero-container {
             flex-direction: column;
-            gap: 13px;
+            gap: 24px;
+            text-align: center;
         }
 
         .hostino-hero-content,
@@ -169,28 +170,27 @@ import AvisReview from "../../components/AvisReview.astro";
             flex: 0 0 100%;
             max-width: 100%;
             padding: 0;
-            text-align: center;
         }
 
         .hostino-hero-title-small {
-            font-size: 17px;
-            line-height: 1.1em;
-            margin: 0;
+            font-size: 14px;
+            line-height: 1.4;
+            margin: 0 0 8px;
         }
 
         .hostino-hero-title-main {
-            font-size: 54px;
-            line-height: 1.1em;
+            font-size: 32px;
+            line-height: 1.2;
             margin: 0;
         }
 
         .hostino-hero-image-col {
             justify-content: center;
-            margin-top: 30px;
         }
-        
+
         .hostino-hero-img {
-            width: 36%;
+            width: 60%;
+            max-width: 260px;
         }
     }
 </style>

@@ -1,4 +1,4 @@
-﻿<header class="site-header">
+<header class="site-header" id="site-header">
     <div class="header-container">
         <!-- Logo Section -->
         <div class="header-logo">
@@ -13,192 +13,480 @@
             </a>
         </div>
 
-        <!-- Navigation Section -->
-        <nav class="header-nav">
-            <!-- Mobile Toggle button (hidden on desktop) -->
-            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
-                <i class="fa-solid fas fa-bars" aria-hidden="true"></i>
-            </button>
-
-            <!-- Menu list -->
+        <!-- Desktop Navigation -->
+        <nav class="header-nav" aria-label="Navigation principale">
             <ul class="nav-list">
                 <li class="nav-item">
-                    <a
-                        href="/"
-                        class="nav-link active">ACCUEIL</a
-                    >
+                    <a href="/" class="nav-link active">ACCUEIL</a>
                 </li>
                 <li class="nav-item">
-                    <a
-                        href="/avis"
-                        class="nav-link">COMPARATIF HÉBERGEURS</a
-                    >
+                    <a href="/avis" class="nav-link">COMPARATIF HÉBERGEURS</a>
                 </li>
                 <li class="nav-item">
-                    <a
-                        href="/a-propos"
-                        class="nav-link">À PROPOS</a
-                    >
+                    <a href="/a-propos" class="nav-link">À PROPOS</a>
                 </li>
                 <li class="nav-item">
-                    <a
-                        href="/contact"
-                        class="nav-link">CONTACT</a
-                    >
+                    <a href="/contact" class="nav-link">CONTACT</a>
                 </li>
             </ul>
-        </nav> 
+        </nav>
+
+        <!-- Hamburger Button (mobile only) -->
+        <button
+            class="mobile-nav-toggle"
+            id="mobile-nav-toggle"
+            aria-label="Ouvrir le menu"
+            aria-expanded="false"
+            aria-controls="mobile-drawer"
+        >
+            <span class="burger-bar"></span>
+            <span class="burger-bar"></span>
+            <span class="burger-bar"></span>
+        </button>
     </div>
 </header>
 
+<!-- Mobile Drawer Overlay -->
+<div class="drawer-overlay" id="drawer-overlay" aria-hidden="true"></div>
+
+<!-- Mobile Drawer -->
+<aside class="mobile-drawer" id="mobile-drawer" aria-hidden="true" role="dialog" aria-label="Menu mobile">
+    <!-- Drawer Header -->
+    <div class="drawer-header">
+        <a href="/" class="drawer-logo-link">
+            <img
+                class="drawer-logo"
+                src="/images/hebergeurmarocain-logo.png"
+                width="160"
+                height="160"
+                alt="Hébergeur Marocain"
+            />
+        </a>
+        <button class="drawer-close" id="drawer-close" aria-label="Fermer le menu">
+            <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
+    </div>
+
+    <!-- Drawer Nav -->
+    <nav class="drawer-nav" aria-label="Navigation mobile">
+        <ul class="drawer-list">
+            <li class="drawer-item">
+                <a href="/" class="drawer-link active">
+                    <i class="fas fa-home drawer-icon" aria-hidden="true"></i>
+                    <span>Accueil</span>
+                </a>
+            </li>
+            <li class="drawer-item">
+                <a href="/avis" class="drawer-link">
+                    <i class="fas fa-star drawer-icon" aria-hidden="true"></i>
+                    <span>Comparatif Hébergeurs</span>
+                </a>
+            </li>
+            <li class="drawer-item">
+                <a href="/a-propos" class="drawer-link">
+                    <i class="fas fa-info-circle drawer-icon" aria-hidden="true"></i>
+                    <span>À Propos</span>
+                </a>
+            </li>
+            <li class="drawer-item">
+                <a href="/contact" class="drawer-link">
+                    <i class="fas fa-envelope drawer-icon" aria-hidden="true"></i>
+                    <span>Contact</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Drawer Footer -->
+    <div class="drawer-footer">
+        <a
+            href="/avis"
+            class="drawer-cta"
+        >
+            <i class="fas fa-search" aria-hidden="true"></i>
+            Voir le comparatif
+        </a>
+        <p class="drawer-tagline">Meilleur hébergement web au Maroc</p>
+    </div>
+</aside>
+
 <style>
-    /*
-     * Header styles — values sourced from:
-     *   styles/style2.css  (header bg, logo height, nav link colors & typography, mobile overrides)
-     *   styles/autoptimize_single_*.css  (global color tokens)
-     */
-
-    /* ── CSS custom properties (from autoptimize_single_*.css + style2.css brand colours) ── */
+    /* ── CSS custom properties ── */
     :root {
-        --color-primary: #7d00ff; /* brand primary */
-        --color-hover: #6e00e0; /* nav link hover (.wdes-menu-navbar .default-drop > li > a:hover) */
-        --color-active: #6e00e0; /* current menu item (.wdes-menu-navbar .default-drop > li.current-menu-item > a) */
-        --color-nav-text: #242424; /* default nav link colour (.wdes-menu-navbar ul.default-drop > li > a) */
-        --font-nav: "Montserrat", sans-serif; /* nav font-family */
+        --color-primary: #294fa1;
+        --color-hover:   #294fa1;
+        --color-active:  #294fa1;
+        --color-nav-text: #242424;
+        --font-nav: "Montserrat", sans-serif;
+        --header-h: 80px;
+        --drawer-w: 300px;
+        --transition-drawer: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    /* ── Site header wrapper (header { … } from style2.css) ── */
+    /* ── Site header ── */
     .site-header {
-        background: linear-gradient(-90deg, #fff 0, #fff 100%);
-        border-bottom: 1px solid #fff;
+        background: #fff;
         width: 100%;
-        position: relative;
-        z-index: 100;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        transition: box-shadow 0.3s ease;
+        border-bottom: 1px solid rgba(0,0,0,0.06);
     }
 
-     .header-container {
+    .site-header.scrolled {
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.10);
+    }
+
+    .header-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
         max-width: 1140px;
-        margin-right: auto;
-        margin-left: auto;
-        padding: 30px 20px;
+        margin: 0 auto;
+        padding: 0 24px;
+        height: var(--header-h);
     }
 
-     .header-logo {
-        flex: 0 0 33.333%;
-    }
+    /* ── Logo ── */
+    .header-logo { flex-shrink: 0; }
 
     .logo-img {
-        height: 50px; 
+        height: 46px;
         width: auto;
         display: block;
     }
 
-     .header-nav {
-        flex: 0 0 66.666%;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-    }
+    /* ── Desktop nav ── */
+    .header-nav { display: flex; align-items: center; }
 
-    /* ── Nav list ── */
     .nav-list {
         list-style: none;
         padding: 0;
         margin: 0;
         display: flex;
-        gap: 30px;
+        gap: 32px;
     }
 
-    .nav-item {
-        display: flex;
-        align-items: center;
-    }
+    .nav-item { display: flex; align-items: center; }
 
-     .nav-link {
+    .nav-link {
+        position: relative;
         text-decoration: none;
-        color: var(--color-nav-text); /* #242424 */
-        font-family: var(--font-nav); /* "Montserrat" */
-         text-transform: uppercase;
-        transition: color 0.3s ease;
+        color: var(--color-nav-text);
+        font-family: var(--font-nav);
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        padding-bottom: 4px;
+        transition: color 0.25s ease;
     }
 
-     .nav-link:hover {
-        color: var(--color-hover); 
+    /* Animated underline */
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: #294fa1;
+        border-radius: 2px;
+        transition: width 0.3s ease;
     }
 
-     .nav-link.active {
-        color: var(--color-active); 
-    }
+    .nav-link:hover { color: #294fa1; }
+    .nav-link:hover::after,
+    .nav-link.active::after { width: 100%; }
+    .nav-link.active { color: #294fa1; }
 
+    /* ── Hamburger button ── */
     .mobile-nav-toggle {
         display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        width: 40px;
+        height: 40px;
         background: none;
         border: none;
-        font-size: 24px;
-         color: #fff;
         cursor: pointer;
-        padding: 0;
+        padding: 6px;
+        border-radius: 8px;
+        transition: background 0.2s;
     }
 
-      @media (max-width: 1024px) {
-        .header-container {
-            max-width: 1024px;
-        }
+    .mobile-nav-toggle:hover { background: rgba(125,0,255,0.06); }
+
+    .burger-bar {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background: var(--color-nav-text);
+        border-radius: 2px;
+        transition: transform 0.35s cubic-bezier(0.4,0,0.2,1),
+                    opacity  0.25s ease,
+                    width    0.25s ease;
+        transform-origin: center;
     }
 
-     @media only screen and (max-width: 960px) and (min-width: 160px) {
-        .header-container {
-            flex-wrap: wrap;
-            padding: 12px 15px;
-        }
-
-        .header-logo {
-            flex: 1 1 auto;
-        }
-
-        /* Show hamburger button */
-        .mobile-nav-toggle {
-            display: block;
-        }
-
-        /* Nav becomes full-width below logo */
-        .header-nav {
-            flex: 1 1 100%;
-            order: 3;
-        }
-
-         .nav-list {
-            display: none;
-            flex-direction: column;
-            width: 100%;
-            gap: 0;
-            background-color: #191919;
-        }
-
-        .nav-list.open {
-            display: flex;
-        }
-
-         .nav-link {
-            color: #fff !important;
-            font-size: 14px;
-            padding: 12px 15px;
-            display: block;
-            border-bottom: 1px solid #232323; /* style2.css: border-bottom:1px solid #232323 */
-        }
-
-        .nav-link:hover,
-        .nav-link.active {
-            color: var(--color-primary) !important; /* #7d00ff */
-        }
+    /* Animate to X when open */
+    .mobile-nav-toggle.is-open .burger-bar:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+    .mobile-nav-toggle.is-open .burger-bar:nth-child(2) {
+        opacity: 0;
+        width: 0;
+    }
+    .mobile-nav-toggle.is-open .burger-bar:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
     }
 
-     @media (max-width: 767px) {
-        .header-container {
-            max-width: 100%;
-        }
+    /* ── Overlay ── */
+    .drawer-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.45);
+        backdrop-filter: blur(3px);
+        z-index: 1100;
+        opacity: 0;
+        transition: opacity var(--transition-drawer);
+    }
+
+    .drawer-overlay.is-visible {
+        display: block;
+    }
+    .drawer-overlay.is-open {
+        opacity: 1;
+    }
+
+    /* ── Mobile Drawer ── */
+    .mobile-drawer {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: var(--drawer-w);
+        max-width: 85vw;
+        height: 100%;
+        background: #fff;
+        z-index: 1200;
+        display: flex;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: transform var(--transition-drawer);
+        box-shadow: -8px 0 40px rgba(0,0,0,0.15);
+        overflow-y: auto;
+    }
+
+    .mobile-drawer.is-open {
+        transform: translateX(0);
+    }
+
+    /* Drawer header */
+    .drawer-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 20px 16px;
+        border-bottom: 1px solid rgba(0,0,0,0.07);
+    }
+
+    .drawer-logo-link { display: flex; }
+
+    .drawer-logo {
+        height: 38px;
+        width: auto;
+    }
+
+    .drawer-close {
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(125,0,255,0.06);
+        border: none;
+        border-radius: 50%;
+        font-size: 16px;
+        color: #294fa1;
+        cursor: pointer;
+        transition: background 0.2s, transform 0.2s;
+    }
+
+    .drawer-close:hover {
+        background: rgba(125,0,255,0.14);
+        transform: rotate(90deg);
+    }
+
+    /* Drawer nav */
+    .drawer-nav { flex: 1; padding: 10px 0; }
+
+    .drawer-list { list-style: none; margin: 0; padding: 0; }
+
+    .drawer-item { border-bottom: 1px solid rgba(0,0,0,0.05); }
+
+    .drawer-link {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 16px 24px;
+        text-decoration: none;
+        font-family: var(--font-nav);
+        font-size: 14px;
+        font-weight: 600;
+        color: #333;
+        letter-spacing: 0.02em;
+        transition: background 0.2s, color 0.2s, padding-left 0.2s;
+        position: relative;
+    }
+
+    .drawer-link::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background: #294fa1;
+        border-radius: 0 3px 3px 0;
+        opacity: 0;
+        transition: opacity 0.2s;
+    }
+
+    .drawer-link:hover,
+    .drawer-link.active {
+        background: rgba(125,0,255,0.05);
+        color: #294fa1;
+        padding-left: 30px;
+    }
+
+    .drawer-link:hover::before,
+    .drawer-link.active::before { opacity: 1; }
+
+    .drawer-icon {
+        width: 18px;
+        text-align: center;
+        font-size: 15px;
+        color: #294fa1;
+        opacity: 0.7;
+        flex-shrink: 0;
+    }
+
+    /* Drawer footer */
+    .drawer-footer {
+        padding: 20px 24px 32px;
+        border-top: 1px solid rgba(0,0,0,0.07);
+        text-align: center;
+    }
+
+    .drawer-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: #294fa1;
+        color: #fff;
+        text-decoration: none;
+        font-family: var(--font-nav);
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        padding: 12px 24px;
+        border-radius: 50px;
+        transition: background 0.25s, transform 0.2s;
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 14px;
+    }
+
+    .drawer-cta:hover {
+        background: var(--color-hover);
+        transform: translateY(-1px);
+    }
+
+    .drawer-tagline {
+        font-size: 11px;
+        color: #aaa;
+        font-family: var(--font-nav);
+    }
+
+    /* ── Responsive — show hamburger at ≤ 960px ── */
+    @media (max-width: 960px) {
+        .header-container { padding: 0 16px; }
+        .header-nav  { display: none; }
+        .mobile-nav-toggle { display: flex; }
+    }
+
+    /* Body lock when drawer is open */
+    :global(body.nav-open) {
+        overflow: hidden; 
     }
 </style>
+
+<script>
+    const toggle  = document.getElementById('mobile-nav-toggle');
+    const drawer  = document.getElementById('mobile-drawer');
+    const overlay = document.getElementById('drawer-overlay');
+    const closeBtn = document.getElementById('drawer-close');
+    const header  = document.getElementById('site-header');
+
+    function openDrawer() {
+        drawer?.classList.add('is-open');
+        overlay?.classList.add('is-visible');
+        // Trigger reflow for transition
+        overlay?.getBoundingClientRect();
+        overlay?.classList.add('is-open');
+        toggle?.classList.add('is-open');
+        toggle?.setAttribute('aria-expanded', 'true');
+        drawer?.setAttribute('aria-hidden', 'false');
+        overlay?.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('nav-open');
+    }
+
+    function closeDrawer() {
+        drawer?.classList.remove('is-open');
+        overlay?.classList.remove('is-open');
+        toggle?.classList.remove('is-open');
+        toggle?.setAttribute('aria-expanded', 'false');
+        drawer?.setAttribute('aria-hidden', 'true');
+        // Wait for transition before hiding overlay
+        setTimeout(() => {
+            if (!drawer?.classList.contains('is-open')) {
+                overlay?.classList.remove('is-visible');
+                overlay?.setAttribute('aria-hidden', 'true');
+            }
+        }, 350);
+        document.body.classList.remove('nav-open');
+    }
+
+    toggle?.addEventListener('click', () => {
+        const isOpen = drawer?.classList.contains('is-open');
+        isOpen ? closeDrawer() : openDrawer();
+    });
+
+    closeBtn?.addEventListener('click', closeDrawer);
+    overlay?.addEventListener('click', closeDrawer);
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && drawer?.classList.contains('is-open')) {
+            closeDrawer();
+        }
+    });
+
+    // Close when a drawer link is clicked
+    drawer?.querySelectorAll('.drawer-link').forEach(link => {
+        link.addEventListener('click', closeDrawer);
+    });
+
+    // Sticky header shadow on scroll
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 10) {
+            header?.classList.add('scrolled');
+        } else {
+            header?.classList.remove('scrolled');
+        }
+    }, { passive: true });
+</script>

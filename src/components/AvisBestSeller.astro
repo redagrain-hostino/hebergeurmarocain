@@ -1,4 +1,4 @@
-﻿---
+---
 
 ---
 
@@ -295,6 +295,7 @@
     .ranking-card-container {
         margin: 0 auto;
         max-width: 1140px;
+        padding: 0 20px;
     }
 
     .ranking-card-body {
@@ -307,12 +308,13 @@
 
     .ranking-col-brand {
         flex: 0 0 100%;
-        padding: 40px 0 0 50px;
+        padding: 40px 0 0 0;
     }
     @media (min-width: 768px) {
         .ranking-col-brand {
             flex: 0 0 39%;
             max-width: 39%;
+            padding: 40px 0 0 50px;
         }
     }
 
@@ -528,24 +530,46 @@
     }
 
     @media (max-width: 767px) {
+        .ranking-card-body {
+            padding-bottom: 40px;
+        }
+
         .ranking-col-brand {
-            padding: 19px;
+            padding: 20px 0 0;
         }
+
         .ranking-brand-name {
-            font-size: 19px;
+            font-size: 17px;
         }
+
         .ranking-section-title {
-            font-size: 19px;
+            font-size: 17px;
         }
+
+        .ranking-stat {
+            font-size: 14px;
+        }
+
+        .ranking-summary {
+            font-size: 14px;
+        }
+
         .ranking-col-badge {
-            padding: 25px 0;
+            padding: 20px 0 10px;
         }
+
         .ranking-badge-icon img.emoji,
         .ranking-badge-num {
-            font-size: 67px;
+            font-size: 60px;
         }
+
+        .ranking-score-number {
+            font-size: 32px;
+        }
+
         .ranking-btn-outline {
-            padding: 11px 20px;
+            padding: 10px 16px;
+            font-size: 14px;
         }
     }
 </style>

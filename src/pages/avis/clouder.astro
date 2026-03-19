@@ -1,4 +1,4 @@
-﻿---
+---
 import AvisReviewClouder from "../../components/AvisReviewClouder.astro";
 import Layout from "../../layouts/Layout.astro";
 import AvisBestSeller from "../../components/AvisBestSeller.astro";
@@ -118,20 +118,23 @@ import AvisBestSeller from "../../components/AvisBestSeller.astro";
         flex: 0 0 55%;
         max-width: 55%;
         display: flex;
-        justify-content: flex-end;
-        text-align: right;
+        justify-content: center;
+        align-items: center;
     }
 
     .clouder-hero-img {
         max-width: 100%;
         height: auto;
         display: block;
-        margin-left: auto;
         width: 47%;
-        filter: brightness(200%) contrast(200%) saturate(100%) blur(0px) hue-rotate(0deg);
-     }
+        filter: brightness(0) invert(1);
+    }
 
     @media (max-width: 1024px) {
+        .clouder-hero-section {
+            padding: 80px 15px;
+        }
+
         .clouder-hero-container {
             flex-direction: column;
             text-align: center;
@@ -141,22 +144,38 @@ import AvisBestSeller from "../../components/AvisBestSeller.astro";
             flex: 0 0 100%;
             max-width: 100%;
             padding-right: 0;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
         .clouder-hero-image-col {
             flex: 0 0 100%;
             max-width: 100%;
+            justify-content: center;
         }
 
         .clouder-hero-title-main {
-            font-size: 40px;
+            font-size: 38px;
         }
     }
 
     @media (max-width: 767px) {
+        .clouder-hero-section {
+            padding: 50px 20px;
+        }
+
+        .clouder-hero-title-small {
+            font-size: 14px;
+            margin: 0 0 8px;
+        }
+
         .clouder-hero-title-main {
-            font-size: 32px;
+            font-size: 28px;
+            line-height: 1.2;
+        }
+
+        .clouder-hero-img {
+            width: 60%;
+            max-width: 280px;
         }
     }
 </style>
